@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style>
+       body{
+           font-size: 25px;
+       }
+    </style>
+</head>
+<body>
+<div>
+    In this html, the viewport's width is default.
+    <ul>
+        <li>your device's screen width is <span id=a></span>px</li>
+        <li>your browser's outer width is <span id=b></span>px</li>
+        <li>your browser's inner width is <span id=c></span>px</li>
+        <li>your viewport's width is <span id=d></span>px</li>
+        <li>your view is now <span id=e></span> times bigger than normal</li>
+    </ul>
+</div>
+<script>
+function setArgs(){
+    // get and set device's real screen width
+    document.getElementById('a').innerText = screen.width
+
+    // get and set browser's outer width and inner width
+    document.getElementById('b').innerText = window.outerWidth
+    document.getElementById('c').innerText = window.innerWidth
+
+    // get and set viewport's width
+    document.getElementById('d').innerText = document.documentElement.clientWidth
+
+    // if window.innerWidth <= window.outerWidth  
+    //    mean device is PC, and there is no zoom out
+    // else
+    //    device is mobile phone, it is zoom out.
+    if (window.innerWidth <= window.outerWidth) {
+        document.getElementById('e').innerText = window.innerWidth / document.documentElement.clientWidth
+    } else {
+        document.getElementById('e').innerText = window.outerWidth / document.documentElement.clientWidth
+    }
+}
+
+    setArgs()
+    window.onresize = () => {
+        setArgs()
+    }
+</script>
+</body>
+</html>
