@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-    this time we have set viewport's width to device-width
+    this time we have set viewport's width to device-width and font size is 25px.
     <ul>
         <li>your device's screen width is <span id=a></span>px</li>
         <li>your browser's outer width is <span id=b></span>px</li>
@@ -17,6 +17,7 @@
         <li>your viewport's width is <span id=d></span>px</li>
         <li>your view is now <span id=e></span> times bigger than normal</li>
     </ul>
+    <a href="./no-viewport.html">visit the side without setting viewport</a>
 </div>
 <script>
 function setArgs(){
@@ -37,7 +38,7 @@ function setArgs(){
     if (window.innerWidth <= window.outerWidth) {
         document.getElementById('e').innerText = window.innerWidth / document.documentElement.clientWidth
     } else {
-        document.getElementById('e').innerText = window.outerWidth / document.documentElement.clientWidth
+        document.getElementById('e').innerText = screen.width / document.documentElement.clientWidth
     }
 }
 

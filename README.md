@@ -17,7 +17,7 @@ is often used in our html file.But what does this do?
   - iPhone will zoom in the viewport to suit the screen 
   - so, Render is successful. But it is 320/980 times smaller than its view on PC
 
-this is an [example](./no-viewport.html). You can feel the difference if you load it in both cellphone and PC. As you can see, any normal size will be zoom in cellphone.
+this is an [example](https://bitfish-xyz.github.io/viewport/no-viewport.html). You can feel the difference if you load it in both cellphone and PC. As you can see, any normal size will be zoom in cellphone.
 
 Whit the time passing, more and more developers are trying to design a responsive webpage. And they optimized their pages for cellphones.
 
@@ -31,7 +31,7 @@ Today, if you add the element to your html file, browser will set viewport's wid
 - else
   - browser on cellphone's viewport width will be screen.width, no zoom in
 
-such as this [example](./viewport.html)
+such as this [example](https://bitfish-xyz.github.io/viewport/viewport.html)
 
 - get device-width width `screen.width`
 - get browser's outer width with `window.outerWidth`
